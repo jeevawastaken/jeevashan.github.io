@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Client</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/ar.js"></script> -->
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div>
+  <a-scene>
+    <a-ring color="teal" radius-inner="1" radius-outer="2"></a-ring>
+    <a-assets>
+      <img id="my-image" src="src/assets/machinery_industry.jpg">
+    </a-assets>
+  
+    <!-- Using the asset management system. -->
+    <a-curvedimage src="#my-image" height="3.0" radius="5.7" theta-length="72"
+                   rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+                   
+    <!-- <a-image src="C:\Users\jeeva\Documents\git_projects\web-ar-angular-frontend\src\assets\machinery_industry.jpg" width="10" height="1.5"></a-image>   -->
+  </a-scene>
+  </div>
+  <app-root></app-root>
+</body>
+</html>
