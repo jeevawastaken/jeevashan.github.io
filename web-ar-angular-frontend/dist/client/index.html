@@ -20,12 +20,13 @@
   </a-scene> -->
   <a-scene embedded="" arjs="">
     <!-- Hand image as the marker -->
-    <a-marker preset="custom">
-      <a-image src="web-ar-angular-frontend/src/assets/hand.jpeg" width="1" height="1"></a-image>
+    <a-marker preset="hiro">
+      <!-- <a-image src="web-ar-angular-frontend/src/assets/hand.jpeg" width="1" height="1"></a-image> -->
+      <a-entity gltf-model="https://github.com/flemos/GLTF-Free/blob/master/open/machine/scene.gltf" position="0 0 0" scale="0.1 0.1 0.1"></a-entity>
     </a-marker>
 
     <!-- Ring model -->
-    <a-entity gltf-model="https://github.com/flemos/GLTF-Free/blob/master/open/machine/scene.gltf" position="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+    
 
     <!-- Camera -->
     <a-entity camera=""></a-entity>
