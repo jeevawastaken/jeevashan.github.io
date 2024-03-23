@@ -12,16 +12,18 @@
 <link rel="stylesheet" href="styles.css"></head>
 <body>
   <div>
-    <!-- <img src="web-ar-angular-frontend/src/assets/hand.jpeg" alt="Existing Image"> -->
+    <!--
+      
+     -->
 
   <!-- <a-scene>
     <a-image src="web-ar-angular-frontend/src/assets/Paume_de_main.png"></a-image>
             
   </a-scene> -->
-  <a-scene embedded="" arjs="">
+  <a-scene embedded="" arjs="sourceType: webcam;">
     <!-- Hand image as the marker -->
-    <a-marker preset="hiro">
-      <a-image src="web-ar-angular-frontend/src/assets/hand.jpeg" width="1" height="1"></a-image>
+    <a-marker type="pattern" url="web-ar-angular-frontend/src/assets/pattern-hiro.patt">
+      <a-plane id="imageplane" position="0 0 0" rotation="-90 0 0" width="4" height="2.25" material="shades:flat; scale:2 2 2 src= web-ar-angular-frontend/src/assets/hand.jpeg"></a-plane>
       <!-- <a-entity gltf-model="https://github.com/flemos/GLTF-Free/blob/master/open/machine/scene.gltf" position="0 0 0" scale="0.1 0.1 0.1"></a-entity> -->
     </a-marker>
 
