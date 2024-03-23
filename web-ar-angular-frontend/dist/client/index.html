@@ -10,29 +10,52 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles.css"></head>
-<body>
-  <div>
-    <!--
-      
-     -->
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+<body>
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded="" arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <!-- we use cors proxy to avoid cross-origin problems -->
+
+    <!--
+      ⚠️⚠️⚠️
+      https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
+      You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
+      ⚠️⚠️⚠️
+    -->
+
+    <a-nft type="nft" url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex" smooth="true" smoothcount="10" smoothtolerance=".01" smooththreshold="5">
+      <a-entity gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" scale="5 5 5" position="50 150 0">
+      </a-entity>
+    </a-nft>
+    <a-entity camera=""></a-entity>
+  </a-scene>
+    
+    
   <!-- <a-scene>
     <a-image src="web-ar-angular-frontend/src/assets/Paume_de_main.png"></a-image>
             
   </a-scene> -->
-  <a-scene embedded="" arjs="sourceType: webcam;">
-    <!-- Hand image as the marker -->
-    <a-marker type="pattern" url="web-ar-angular-frontend/src/assets/pattern-hiro.patt">
-      <a-assets>
-        <img id="ground" src="hand.jpeg">
-      </a-assets>
-    
-      <!-- Basic plane. -->
-      <a-plane color="#CCC" height="20" width="20"></a-plane>
-    
-      <!-- Textured plane parallel to ground. -->
-      <a-plane src="#ground" height="100" width="100" rotation="-90 0 0"></a-plane>      <!-- <a-entity gltf-model="https://github.com/flemos/GLTF-Free/blob/master/open/machine/scene.gltf" position="0 0 0" scale="0.1 0.1 0.1"></a-entity> -->
-    </a-marker>
 
     <!-- Ring model -->
     
@@ -40,7 +63,6 @@
     <!-- Camera -->
     <a-entity camera=""></a-entity>
   </a-scene>
-  </div>
   <app-root></app-root>
 <script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
 </html>
