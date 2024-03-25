@@ -16,8 +16,21 @@
       "es2018",
       "dom"
     ]
+
   },
+
+//   "exclude": [
+//     "node_modules"
+//   ],
+  
+//   "include": [
+//     "src/**/*"
+// ],
+
+
   "angularCompilerOptions": {
+    
     "enableI18nLegacyMessageIdFormat": false
   }
+
 }
