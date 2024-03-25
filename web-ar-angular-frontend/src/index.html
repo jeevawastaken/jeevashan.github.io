@@ -15,8 +15,13 @@
     <img src="web-ar-angular-frontend/src/assets/Paume_de_main.png" alt="Existing Image">
 
   <a-scene>
-    <a-image src="web-ar-angular-frontend/src/assets/Paume_de_main.png"></a-image>
-            
+    <!-- <a-image src="web-ar-angular-frontend/src/assets/ring.png"></a-image> -->
+    <a-assets>
+      <img id="my-image" src="web-ar-angular-frontend/src/assets/ring.png">
+    </a-assets>
+  
+    <!-- Using the asset management system. -->
+    <a-image src="#my-image" opacity="0.5"></a-image>       
   </a-scene>
 </div>
   <app-root></app-root>
