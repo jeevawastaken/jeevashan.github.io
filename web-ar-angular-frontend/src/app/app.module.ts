@@ -36,6 +36,7 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import  '@google/model-viewer';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -52,6 +53,7 @@ registerLocaleData(en);
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
+   
   ],
   imports: [
     BrowserModule,
