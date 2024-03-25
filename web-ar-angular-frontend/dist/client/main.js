@@ -1716,9 +1716,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ng-zorro-antd/progress */ "W9fG");
 /* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ng-zorro-antd/table */ "rMZv");
 /* harmony import */ var _google_model_viewer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @google/model-viewer */ "PzGh");
-/* harmony import */ var _arscene_ar_scene_ar_scene_module__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./arscene/ar-scene/ar-scene.module */ "mp0T");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/core */ "fXoL");
 
 
 
@@ -1761,8 +1759,8 @@ Object(_angular_common__WEBPACK_IMPORTED_MODULE_21__["registerLocaleData"])(_ang
 class AppModule {
 }
 AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineInjector"]({ providers: [
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_36__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_36__["ɵɵdefineInjector"]({ providers: [
         _services_interceptor_service__WEBPACK_IMPORTED_MODULE_18__["authInterceptorProviders"],
         _guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_19__["AuthGuardService"],
         { provide: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_20__["NZ_I18N"], useValue: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_20__["en_US"] },
@@ -1785,9 +1783,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineInjecto
             ng_zorro_antd_notification__WEBPACK_IMPORTED_MODULE_32__["NzNotificationModule"],
             ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_33__["NzProgressModule"],
             ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_34__["NzTableModule"],
-            _arscene_ar_scene_ar_scene_module__WEBPACK_IMPORTED_MODULE_36__["ArSceneModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_36__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
         _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
         _auth_components_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"],
         _auth_components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"],
@@ -1815,8 +1812,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_37__["ɵɵdefineInjecto
         ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_31__["NzSpinModule"],
         ng_zorro_antd_notification__WEBPACK_IMPORTED_MODULE_32__["NzNotificationModule"],
         ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_33__["NzProgressModule"],
-        ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_34__["NzTableModule"],
-        _arscene_ar_scene_ar_scene_module__WEBPACK_IMPORTED_MODULE_36__["ArSceneModule"]] }); })();
+        ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_34__["NzTableModule"]] }); })();
 
 
 /***/ }),
@@ -2535,41 +2531,6 @@ FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
 
 /***/ }),
 
-/***/ "k2NN":
-/*!********************************************************!*\
-  !*** ./src/app/arscene/ar-scene/ar-scene.component.ts ***!
-  \********************************************************/
-/*! exports provided: ArSceneComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArSceneComponent", function() { return ArSceneComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-class ArSceneComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-}
-ArSceneComponent.ɵfac = function ArSceneComponent_Factory(t) { return new (t || ArSceneComponent)(); };
-ArSceneComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ArSceneComponent, selectors: [["app-ar-scene"]], decls: 7, vars: 0, consts: [["id", "platform", "src", "platform.jpg"], ["position", "0 0.5 0", "radius", "100", "color", "red"]], template: function ArSceneComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "ar-scene works!");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a-scene");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a-assets");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "img", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "a-circle", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhci1zY2VuZS5jb21wb25lbnQuc2NzcyJ9 */"] });
-
-
-/***/ }),
-
 /***/ "lGQG":
 /*!******************************************!*\
   !*** ./src/app/services/auth.service.ts ***!
@@ -2634,32 +2595,6 @@ class AuthService {
 }
 AuthService.ɵfac = function AuthService_Factory(t) { return new (t || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_token_storage_service__WEBPACK_IMPORTED_MODULE_4__["TokenStorageService"])); };
 AuthService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: AuthService, factory: AuthService.ɵfac, providedIn: 'root' });
-
-
-/***/ }),
-
-/***/ "mp0T":
-/*!*****************************************************!*\
-  !*** ./src/app/arscene/ar-scene/ar-scene.module.ts ***!
-  \*****************************************************/
-/*! exports provided: ArSceneModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArSceneModule", function() { return ArSceneModule; });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _ar_scene_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ar-scene.component */ "k2NN");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-class ArSceneModule {
-}
-ArSceneModule.ɵfac = function ArSceneModule_Factory(t) { return new (t || ArSceneModule)(); };
-ArSceneModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: ArSceneModule });
-ArSceneModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](ArSceneModule, { declarations: [_ar_scene_component__WEBPACK_IMPORTED_MODULE_1__["ArSceneComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]] }); })();
 
 
 /***/ }),

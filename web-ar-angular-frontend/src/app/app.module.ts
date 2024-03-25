@@ -36,9 +36,6 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import  '@google/model-viewer';
-import { ArSceneComponent } from './arscene/ar-scene/ar-scene.component';
-import { ArSceneModule } from './arscene/ar-scene/ar-scene.module';
-
 registerLocaleData(en);
 
 @NgModule({
@@ -75,7 +72,6 @@ registerLocaleData(en);
     NzNotificationModule,
     NzProgressModule,
     NzTableModule,
-    ArSceneModule,
   ],
   providers: [
     authInterceptorProviders,
