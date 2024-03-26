@@ -1467,38 +1467,37 @@ class AppComponent {
     }
     ngOnInit() {
         // Register your custom A-Frame component here
-        AFRAME.registerComponent('load-model-on-click', {
-            schema: {
-                model: { type: 'string' },
-                position: { type: 'vec3', default: { x: 0, y: 0, z: 0 } },
-                rotation: { type: 'vec3', default: { x: 0, y: 0, z: 0 } }
-            },
+        AFRAME.registerComponent('model-loader', {
             init: function () {
-                this.el.addEventListener('click', this.onClick.bind(this));
-            },
-            onClick: function () {
-                const modelEntity = document.createElement('a-entity');
-                modelEntity.setAttribute('obj-model', this.data.model);
-                modelEntity.setAttribute('position', this.data.position);
-                modelEntity.setAttribute('rotation', this.data.rotation);
-                this.el.appendChild(modelEntity);
+                const sceneEl = this.el.sceneEl;
+                // Add HTML button element
+                const button = document.createElement('button');
+                button.textContent = 'Load Model';
+                button.style.position = 'absolute';
+                button.style.top = '20px';
+                button.style.left = '20px';
+                button.addEventListener('click', () => {
+                    // Load the OBJ model
+                    const modelEl = document.createElement('a-obj-model');
+                    modelEl.setAttribute('src', 'path/to/your/model.obj');
+                    modelEl.setAttribute('position', '0 1 -3'); // Adjust position as needed
+                    sceneEl.appendChild(modelEl);
+                });
+                // Append button to the A-Frame scene
+                sceneEl.appendChild(button);
             }
         });
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 8, vars: 0, consts: [["id", "tree-obj", "src", "web-ar-angular-frontend/src/assets/the_crowned_ring.obj"], ["id", "tree-mtl", "src", "web-ar-angular-frontend/src/assets/the_crowned_ring.mtl"], ["load-model-on-click", "obj: #tree-obj; mtl: #tree-mtl"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 5, vars: 0, consts: [["model-loader", ""]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "a-scene");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a-assets");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "a-asset-item", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "a-asset-item", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "a-entity", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "a-entity", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "app-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "app-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "router-outlet");
     } }, directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_2__["HeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: ["body[_ngcontent-%COMP%] {\n  font-family: \"Montserrat\", Arial, sans-serif;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksNENBQUE7QUFDSiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5e1xyXG4gICAgZm9udC1mYW1pbHk6ICdNb250c2VycmF0JywgQXJpYWwsIHNhbnMtc2VyaWY7XHJcbn0iXX0= */"] });
 
 

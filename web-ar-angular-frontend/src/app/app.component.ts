@@ -13,21 +13,26 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     // Register your custom A-Frame component here
-    AFRAME.registerComponent('load-model-on-click', {
-      schema: {
-        model: { type: 'string' },
-        position: { type: 'vec3', default: { x: 0, y: 0, z: 0 } },
-        rotation: { type: 'vec3', default: { x: 0, y: 0, z: 0 } }
-      },
+    AFRAME.registerComponent('model-loader', {
       init: function () {
-        this.el.addEventListener('click', this.onClick.bind(this));
-      },
-      onClick: function () {
-        const modelEntity = document.createElement('a-entity');
-        modelEntity.setAttribute('obj-model', this.data.model);
-        modelEntity.setAttribute('position', this.data.position);
-        modelEntity.setAttribute('rotation', this.data.rotation);
-        this.el.appendChild(modelEntity);
+        const sceneEl = this.el.sceneEl;
+    
+        // Add HTML button element
+        const button = document.createElement('button');
+        button.textContent = 'Load Model';
+        button.style.position = 'absolute';
+        button.style.top = '20px';
+        button.style.left = '20px';
+        button.addEventListener('click', () => {
+          // Load the OBJ model
+          const modelEl = document.createElement('a-obj-model');
+          modelEl.setAttribute('src', 'path/to/your/model.obj');
+          modelEl.setAttribute('position', '0 1 -3'); // Adjust position as needed
+          sceneEl.appendChild(modelEl);
+        });
+    
+        // Append button to the A-Frame scene
+        sceneEl.appendChild(button);
       }
     });
   }
