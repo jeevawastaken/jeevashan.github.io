@@ -34,13 +34,14 @@
     "rxjs": "~6.6.0",
     "swiper": "^6.5.6",
     "three": "^0.162.0",
-    "tslib": "^2.0.0",
+    "tslib": "^2.6.2",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.6",
     "@angular/cli": "~11.2.6",
     "@angular/compiler-cli": "~11.2.7",
+    "@types/component-emitter": "^1.2.14",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "@types/three": "^0.162.0",
