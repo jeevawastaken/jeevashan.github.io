@@ -29,7 +29,13 @@
     <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
     <a-entity id="mario"></a-entity>
   </a-scene> -->
-
+  <a-scene>
+    <a-assets>
+        <a-asset-item id="tree-obj" src="web-ar-angular-frontend/src/assets/the_crowned_ring.obj"></a-asset-item>
+        <a-asset-item id="tree-mtl" src="web-ar-angular-frontend/src/assets/the_crowned_ring.mtl"></a-asset-item>
+      </a-assets>
+    <a-entity load-model-on-click="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+    </a-scene>
 </div>
   <app-root></app-root>
 <script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
