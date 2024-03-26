@@ -6,7 +6,11 @@
 
 <div>
     <a-scene>
-        <a-entity load-model-on-click="web-ar-angular-frontend/src/assets/the_crowned_ring.obj"></a-entity>
+        <a-assets>
+            <a-asset-item id="tree-obj" src="web-ar-angular-frontend/src/assets/the_crowned_ring.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="web-ar-angular-frontend/src/assets/the_crowned_ring.mtl"></a-asset-item>
+          </a-assets>
+        <a-entity load-model-on-click="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
         </a-scene>
 </div>
 <app-header></app-header>
