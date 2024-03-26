@@ -1479,7 +1479,7 @@ class AppComponent {
                 button.addEventListener('click', () => {
                     // Load the OBJ model
                     const modelEl = document.createElement('a-obj-model');
-                    modelEl.setAttribute('src', 'path/to/your/model.obj');
+                    modelEl.setAttribute('src', 'web-ar-angular-frontend/src/assets/the_crowned_ring.obj');
                     modelEl.setAttribute('position', '0 1 -3'); // Adjust position as needed
                     sceneEl.appendChild(modelEl);
                 });
