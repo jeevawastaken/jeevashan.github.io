@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -16,23 +15,13 @@
       "es2018",
       "dom"
     ],
-    "typeRoots": ["node_modules/@types", "./typings"]
-
-
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "./typings"
+    ]
   },
-
-//   "exclude": [
-//     "node_modules"
-//   ],
-  
-//   "include": [
-//     "src/**/*"
-// ],
-
-
   "angularCompilerOptions": {
-    
     "enableI18nLegacyMessageIdFormat": false
   }
-
 }
