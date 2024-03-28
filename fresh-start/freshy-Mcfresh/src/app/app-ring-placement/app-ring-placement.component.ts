@@ -4,7 +4,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 @Component({
   selector: 'app-ring-placement',
-  template: '<div><img src="path/to/hand-image.jpg" alt="Hand Image" id="handImage"></div>',
+  template: 'app-ring-placement.component.html',
   styleUrls: ['./app-ring-placement.component.scss']
 })
 export class  AppRingPlacementComponent implements OnInit {
