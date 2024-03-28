@@ -12,21 +12,21 @@
 <link rel="stylesheet" href="styles-5INURTSO.css"></head>
 <body>
   <div>
-  <img id="handImage" src="fresh-start/freshy-Mcfresh/src/assets/Hand-tracking-image.png" alt="Hand>
+  <img id="handImage" src="fresh-start/freshy-Mcfresh/src/assets/Hand-tracking-image.png" alt="Hand Image">
 
     <!-- A-Frame scene -->
     <a-scene embedded arjs>
         <!-- Hidden 3D model of the ring -->
         <a-assets>
-          <a-asset-item id=" tree-obj">
+          <a-asset-item id="tree-obj" src="fresh-start/freshy-Mcfresh/src/assets/91-the_crowned_ring_obj_format/the_crowned_ring.obj"></a-asset-item>
           <a-asset-item id="tree-mtl" src="fresh-start/freshy-Mcfresh/src/assets/91-the_crowned_ring_obj_format/the_crowned_ring.mtl"></a-asset-item>
-        
+        </a-assets>
       
         <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" ,visible="false"></a-entity>
 
         <!-- AR camera -->
         <a-entity camera></a-entity>
-    
+    </a-scene>
 
     <!-- JavaScript to handle the click event -->
     <script>
