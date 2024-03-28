@@ -21,7 +21,7 @@
           <a-asset-item id="tree-mtl" src="fresh-start/freshy-Mcfresh/src/assets/91-the_crowned_ring_obj_format/the_crowned_ring.mtl"></a-asset-item>
         </a-assets>
       
-        <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+        <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" ,visible="false"></a-entity>
 
         <!-- AR camera -->
         <a-entity camera></a-entity>
@@ -34,7 +34,7 @@
 
         handImage.addEventListener('click', () => {
             // Show the 3D model of the ring
-            ringModel.setAttribute('visible', true);
+            obj-model.setAttribute('visible', true);
         });
     </script>
   <!-- <a-scene> -->
@@ -72,5 +72,5 @@
     </script> -->
     
   <app-root></app-root>
-<script src="polyfills-RT5I6R6G.js" type="module"></script><script src="main-2RW727HE.js" type="module"></script></body>
+<script src="polyfills-RT5I6R6G.js" type="module"></script><script src="main-5Q5BASWN.js" type="module"></script></body>
 </html>
